@@ -168,7 +168,10 @@ public struct ReaderSidebarChrome<Content: View>: View {
                 }
                 .buttonStyle(.plain)
                 .background(
-                    RoundedRectangle(cornerRadius: theme.spacing.small, style: .continuous)
+                    RoundedRectangle(
+                        cornerRadius: theme.metrics.activeTabCornerRadius,
+                        style: .continuous
+                    )
                         .fill(activePane == pane ? theme.colors.inputBackground : Color.clear)
                 )
                 .foregroundStyle(
